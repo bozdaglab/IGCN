@@ -10,4 +10,12 @@ multiplication denoted as ' $\otimes$ ' in the integration layer.
 Finally, a prediction module utilizes fused node
 embeddings on multiple similarity networks and takes advantage of multiple graph topologies to determine the final predictions.
 
-
+# How to Run IGCN
+After having all files in the directory, run `IGCN.py`.
+### Inputs
+TCGA-BRCA dataset was employed for the training and testing of IGCN. 
+* The preprocessed multi-omics features and ground truth labels can be found in the dataset folder.
+   * `1_.csv`: Gene expression features
+   * `2_.csv`: miRNA expression features
+   * `3_.csv`: DNA methylation features
+   * `labels_.csv`: Ground truth labels
