@@ -19,3 +19,14 @@ TCGA-BRCA dataset was employed for the training and testing of IGCN.
    * `2_.csv`: miRNA expression features
    * `3_.csv`: DNA methylation features
    * `labels_.csv`: Ground truth labels
+# Costumize IGCN
+* We note that users can adjust the following parameters in `IGCN.py` (lines 12-15) for quick testing of IGCN
+   * Reduce `xtimes1`, and `xtimes2` to a small number, like 3.
+   * Retain only one element in the learning_rates list, for example, [0.001].
+   * Retain only one element in the hd_sizes list, for example, [256].
+* Users can also adjust the following parameters of `IGCN.py` and `main.py`
+   * `max_epochs`: maximum number of epoch (line 9 of `IGCN.py`, default is 1000) 
+   * `min_epochs`: minimum number of epoch line 10 of `IGCN.py`, default is 200)
+   * `patients`: patience for early stopping (line 11 of `IGCN.py`, default is 30)
+   *  `thereshold`: a threshold to construct the adjancecy matrices (line 10 of `main.py`, default is 3)
+
