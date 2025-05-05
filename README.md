@@ -30,3 +30,4 @@ TCGA-BRCA dataset was employed for the training and testing of IGCN.
    * `patients`: patience for early stopping (line 11 of `IGCN.py`, default is 30)
    *  `thereshold`: a threshold to construct the adjancecy matrices (line 10 of `main.py`, default is 3)
 
+Cite the code: [![DOI](https://zenodo.org/badge/743610624.svg)](https://doi.org/10.5281/zenodo.15345835)
