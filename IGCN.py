@@ -101,7 +101,7 @@ for IT in rand_states:
                     y=torch.tensor(labels, device=device).long())
 
         DATA[i] = data
-    best_ValidLoss = np.Inf
+    best_ValidLoss = np.inf
     in_size1 = DATA[0].x.shape[1]
     in_size2 = DATA[1].x.shape[1]
     in_size3 = DATA[2].x.shape[1]
@@ -117,7 +117,7 @@ for IT in rand_states:
                 valid_mask = np.array([i in set(val_idx) for i in range(data.x.shape[0])])
                 DATA[0].valid_mask = torch.tensor(valid_mask, device=device)
 
-                min_valid_loss = np.Inf
+                min_valid_loss = np.inf
                 patience_count = 0
                 TR_loss = list()
                 Te_loss = list()
@@ -153,7 +153,7 @@ for IT in rand_states:
         model = combine_module2.GCN(in_size1=in_size1, in_size2=in_size2, in_size3=in_size3, hid_size1=best_emb_hs,
                                     out_size=out_size)
         optimizer = torch.optim.Adam(model.parameters(), lr=best_emb_lr)
-        min_valid_loss = np.Inf
+        min_valid_loss = np.inf
         patience_count = 0
         TR_loss = list()
         Te_loss = list()
